@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/dashboard.dart';
+import 'package:get/get.dart';
+
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -19,7 +22,7 @@ class _LoginState extends State<Login> {
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.blue, Colors.purple]),
+            gradient: LinearGradient(colors: [Colors.blue, Colors.red]),
           ),
         ),
         leading: IconButton(
@@ -86,7 +89,7 @@ class _LoginState extends State<Login> {
             ),
             ElevatedButton(
               onPressed: () {
-                print('ini tombol masuk');
+                Get.offAll(Dashboard());
               },
               style: ElevatedButton.styleFrom(
                 minimumSize: Size.fromHeight(50),
